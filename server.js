@@ -8,7 +8,7 @@ app.use(function(req, res, next) {
   next();
 });
 const corsOptions ={
-    origin:'http://localhost:3000', 
+    origin:'https://tic-tec-toe-game.onrender.com', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
@@ -20,7 +20,7 @@ const server = app.listen(5000, console.log("server is running at port 5000"));
 const io = require("socket.io")(server, {
   pingTimeout: 6000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://tic-tec-toe-game.onrender.com",
   },
 });
 io.on("connection", (socket) => {
