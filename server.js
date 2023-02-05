@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 app.get("/", (req, res) => {
+   res.setHeader("Access-Control-Allow-Credentials","true");
   res.send("server is running");
 });
 const server = app.listen(5000, console.log("server is running at port 5000"));
